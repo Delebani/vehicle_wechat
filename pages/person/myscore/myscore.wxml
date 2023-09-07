@@ -1,0 +1,51 @@
+<!--pages/person/myscore/myscore.wxml-->
+
+<!--页面内容-->
+<view class="score-container">
+    <view class="statistics">
+        <view class="score">
+            <view class="score-sub" style="font-weight: bold;">{{score.pointLj}}</view>
+            <view class="score-sub">累计积分</view>
+        </view>
+        <view class="score" style="margin-left: 40rpx;">
+            <view class="score-sub" style="font-weight: bold;">{{score.pointKy}}</view>
+            <view class="score-sub">可用积分</view>
+            
+        </view>
+        <view class="score" style="margin-left: 40rpx;">
+            <view class="score-sub" style="font-weight: bold;">{{score.pointYy}}</view>
+            <view class="score-sub">已用积分</view>
+            
+        </view>
+        <view class="score" style="margin-left: 40rpx;">
+            <view class="score-sub" style="font-weight: bold;">{{score.pointGq}}</view>
+            <view class="score-sub">过期积分</view>
+        </view>
+    </view>
+    <view class="picker-container">
+      <view class="bglxpicker">
+        <picker header-text="变更类型" mode="selector" value="{{bglxIndex}}"  bindchange="bglxPickerChange" range="{{bglxArray}}" range-key="name" >
+          <view>
+            {{bglxArray[bglxIndex].name}}∨
+          </view>
+        </picker>
+      </view>
+      <view class="bgqdpicker">
+        <picker header-text="变更渠道" mode="selector" value="{{bgqdIndex}}" bindchange="bgqdPickerChange" range="{{bgqdArray}}" range-key="name" >
+          <view>
+            {{bgqdArray[bgqdIndex].name}}∨
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="container">
+    
+      <view class="item" wx:key = "*this" wx:for="{{list}}">
+          <view hidden="true">{{item.pointId}}</view>
+          <view class="op">{{item.czms}}：</view>
+          <view class="content">变更时间：<text style="color:red">{{item.czsj}}</text></view>
+          <view class="content">变更积分：<text style="color:red">{{item.jf}}</text></view>
+      </view>
+            
+    </view>
+</view>

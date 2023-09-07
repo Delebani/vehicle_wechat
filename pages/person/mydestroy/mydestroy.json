@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle":"dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "核销记录",
+  "navigationBarTextStyle":"black",
+  "enablePullDownRefresh":true
+}

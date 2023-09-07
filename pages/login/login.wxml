@@ -1,0 +1,17 @@
+<!--登录-->
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+<!-- 需要使用 button 来授权登录 -->
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> -->
+
+<view class="hello">
+    <view class="content">您好，欢迎加入福利中心</view>
+    <view class="content">正在登录中......</view>
+     <image mode="widthFix" src="/static/img/welcome/welcome.png"></image>
+</view>
+<!-- <view wx:if='{{viewShow}}'  class="button-sp-area">
+    
+   
+    <button open-type="getPhoneNumber" type="primary" 	hover-class = 'button-hover' bindgetphonenumber="getPhoneNumber">一键登录</button>
+</view> -->

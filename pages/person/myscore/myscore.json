@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle":"dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "个人积分",
+  "navigationBarTextStyle":"black",
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance":50
+}

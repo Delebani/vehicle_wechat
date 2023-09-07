@@ -1,0 +1,59 @@
+<!--pages/person/myinfo/myinfo.wxml-->
+<authorization>
+    <view>
+        <view class="head">
+            <button class="headbtn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                <image class="img" src="{{avatarUrl}}"></image>
+                </button> 
+            <!-- <view class="username-mobile">
+                <view class="username">{{userInfo.name}}</view>
+                <view class="mobile">{{userInfo.mobile}}</view>
+            </view> -->
+        </view>
+        <view class="person-container">
+            <!-- <view class="person-sub">
+                <view class="text">姓名</view>
+                <view class="right">{{userInfo.realname}}</view>
+            </view> -->
+            <view class="person-sub">
+                <view class="text">手机号</view>
+                <view class="right">
+                    <input type="number" bindinput="onPhoneInput" bindconfirm="onPhoneConfirm" value="{{userInfo.phone}}" maxlength ="11" confirm-type="done"/>
+                    <image class ="rightimg" mode="widthFix"  src="/static/img/right/right.png"></image>
+                </view>
+            </view>
+            <view class="person-sub">
+                <view class="text">昵称</view>
+                <view class="right">
+                    <input type="nickname" value="{{userInfo.nickName}}" bindinput="onInput" bindconfirm="onConfirm" confirm-type="done"/>
+                    <image class ="rightimg" mode="widthFix"  src="/static/img/right/right.png"></image>
+                </view>
+            </view>
+            <view class="person-sub">
+                <view class="text">性别</view>
+                <view class="right">
+                    <picker header-text="性别" mode="selector" value="{{sexIndex}}" bindchange="sexChange" range="{{sexArray}}" range-key="name" >
+                        {{sexArray[sexIndex].name}}
+                        <image class ="rightimg" mode="widthFix"  src="/static/img/right/right.png"></image>
+                    </picker>
+                </view>
+            </view>
+            <!-- <view class="person-sub">
+                <view class="text">出生年月</view>
+                <view class="right">
+                    <picker mode="date" value="{{date}}" start="1900-01-01" end="2099-01-01" bindchange="bindDateChange">
+                    {{userInfo.birthday}}
+                    <image class ="rightimg" mode="widthFix"  src="/static/img/right/right.png"></image>
+                    </picker>
+                </view>
+            </view> -->
+            <!-- <view class="person-sub">
+                <view class="text">身份证</view>
+                <view class="right">{{userInfo.idno}}</view>
+            </view> -->
+            <view class="saveview">
+                <button class="savebtn" bindtap="save">保存个人信息</button>
+            </view>
+        </view>
+    </view>
+</authorization>

@@ -1,0 +1,39 @@
+<!--pages/person/mydestroy/mydestroy.wxml-->
+<authorization>
+    
+    <!-- <view class="selector">
+        <view bindtap="choose" data-spddstatus="" class="all" style="background-color: {{allbackcolor}};color: {{allcolor}};">全部</view>
+        <view bindtap="choose" data-spddstatus="1" class="yhx" style="background-color: {{hxbackcolor}};color: {{hxcolor}};">已核销</view>
+    </view> -->
+    <view class="container">
+      <!--垂直滚动，这里必须设置高度-->
+        <!-- <scroll-view enable-back-to-top="true" scroll-with-animation="true" scroll-y="true" style="height:{{scrollHeight}}px;" 
+            class="list" bindscrolltolower="bindDownLoad"  bindscroll="scroll"> -->
+        <view class="item" wx:key = "*this" wx:for="{{list}}" data-hxid="{{item.hxid}}">
+           
+            
+            <view hidden="true">{{item.orderId}}</view>
+            <view class="bh">订单编号：{{item.orderBh}}</view>
+            <view class="content">订单积分：{{item.orderSfjf}}</view>
+            <view class="content">商品名称：{{item.flspMc}}</view>
+            <view class="content">下单人：{{item.orderBy}}</view>
+            <view hidden="true">{{item.flspId}}</view>
+            
+            <view class="content">核销人员：{{item.createBy}}</view>
+            <view class="content">核销时间：{{item.hxTime}}</view>
+            
+            <!-- <button class="spddStatus" data-bmid="{{item.bmid}}" data-spddStatus="{{item.spddStatus}}" data-orderid="{{item.orderId}}">
+                    {{item.spddStatustxt}}
+                </button> -->
+        </view>
+        <!-- <view class="loadmore" wx:if="{{bottom}}">
+                ---没有更多了---
+            </view>
+        </scroll-view>
+        <view class="body-view">
+            <loading hidden="{{hidden}}" bindchange="loadingChange">
+                加载中...
+            </loading>
+        </view> -->
+    </view>
+</authorization>

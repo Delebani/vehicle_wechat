@@ -1,0 +1,37 @@
+<!--pages/person/mywelfare/mywelfare.wxml-->
+<authorization>
+    
+    <view class="selector">
+        <view bindtap="choose" data-spddstatus="" class="all" style="background-color: {{allbackcolor}};color: {{allcolor}};">全部</view>
+        <view bindtap="choose" data-spddstatus="0" class="hx" style="background-color: {{hxbackcolor}};color: {{hxcolor}};">待核销</view>
+    </view>
+    <view class="container">
+      <!--垂直滚动，这里必须设置高度-->
+        <!-- <scroll-view enable-back-to-top="true" scroll-with-animation="true" scroll-y="true" style="height:{{scrollHeight}}px;" 
+            class="list" bindscrolltolower="bindDownLoad"  bindscroll="scroll"> -->
+        <view class="item" wx:key = "*this" wx:for="{{list}}" data-orderId="{{item.orderId}}" bindtap="detail">
+           
+            
+            
+            <view class="bh">商品名称：{{item.flspMc}}</view>
+            <view class="content">到期时间：{{item.dqsj}}</view>
+            
+            <view class="content">实付积分：{{item.orderSfjf}}</view>
+            
+            <view class="content">订单状态：{{item.orderStatus}}</view>
+            
+            <!-- <button class="spddStatus" data-bmid="{{item.bmid}}" data-spddStatus="{{item.orderStatus}}" bindtap="hx" data-orderid="{{item.orderId}}">
+                    {{item.orderStatustxt}}
+                </button> -->
+        </view>
+        <!-- <view class="loadmore" wx:if="{{bottom}}">
+                ---没有更多了---
+            </view>
+        </scroll-view>
+        <view class="body-view">
+            <loading hidden="{{hidden}}" bindchange="loadingChange">
+                加载中...
+            </loading>
+        </view> -->
+    </view>
+</authorization>

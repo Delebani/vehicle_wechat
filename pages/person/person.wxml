@@ -1,0 +1,41 @@
+<!--pages/person/person.wxml-->
+<authorization>
+    <view>
+        <view class="head">
+            <image class="img" src="{{userInfo.avatarUrl}}"></image>
+            <view class="username-mobile">
+                <view class="username">{{userInfo.nickName}}</view>
+                <view class="mobile">{{userInfo.phone}}</view>
+            </view>
+            <view class="qrcodeimg-view" bindtap="qrcode"><image class="qrcodeimg" mode="widthFix" src="/static/img/person/qrcode.png"></image></view>
+            <view class="setimg-view" bindtap="myinfo"><image class="setimg" mode="widthFix" src="/static/img/person/set.png"></image></view>
+        </view>
+        <view class="person-container">
+            <view class="person-sub" bindtap="myactivity" wx:if="{{resident}}">
+                <view class="person-img-view"><image class="person-img" mode="widthFix" src="/static/img/person/activity.png"></image></view>
+                <view class="text">我的活动</view>
+                <view class="right"><image class ="rightimg" mode="widthFix" src="/static/img/right/right.png"></image></view>
+            </view>
+            <view class="person-sub" bindtap="mywelfare" wx:if="{{resident}}">
+                <view class="person-img-view"><image class="person-img" mode="widthFix" src="/static/img/person/welfare.png"></image></view>
+                <view class="text">我的福利</view>
+                <view class="right"><image class ="rightimg" mode="widthFix" src="/static/img/right/right.png"></image></view>
+            </view>
+            <view class="person-sub" bindtap="myscore"  wx:if="{{resident}}">
+                <view class="person-img-view"><image class="person-img" mode="widthFix" src="/static/img/person/score.png"></image></view>
+                <view class="text">我的积分</view>
+                <view class="right"><image class ="rightimg" mode="widthFix" src="/static/img/right/right.png"></image></view>
+            </view>
+            <view class="person-sub" bindtap="mydestroy" wx:if="{{business}}">
+                <view class="person-img-view"><image class="person-img" mode="widthFix" src="/static/img/person/hx.png"></image></view>
+                <view class="text">核销记录</view>
+                <view class="right"><image class ="rightimg" mode="widthFix" src="/static/img/right/right.png"></image></view>
+            </view>
+            <view class="person-sub" bindtap="myinfo">
+                <view class="person-img-view"><image class="person-img" mode="widthFix" src="/static/img/person/personmsg.png"></image></view>
+                <view class="text">个人信息</view>
+                <view class="right"><image class ="rightimg" mode="widthFix" src="/static/img/right/right.png"></image></view>
+            </view>
+        </view>
+    </view>
+</authorization>

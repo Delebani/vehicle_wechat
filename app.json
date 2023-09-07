@@ -1,0 +1,48 @@
+{
+  "entryPagePath":"pages/index/index",
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/apply/apply",
+    "pages/expense/expense",
+    "pages/person/person"
+  ],
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#d81e06",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/apply/apply",
+        "iconPath": "static/img/tabbar/apply.png",
+        "selectedIconPath": "static/img/tabbar/applyselect.png",
+        "text": "用车申请"
+      },
+      {
+        "pagePath": "pages/expense/expense",
+        "iconPath": "static/img/tabbar/expense.png",
+        "selectedIconPath": "static/img/tabbar/expenseselect.png",
+        "text": "费用报销"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "static/img/tabbar/my.png",
+        "selectedIconPath": "static/img/tabbar/myselect.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "车辆管理",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "authorization": "/components/authorization/authorization"
+  },
+  "debug": true
+}

@@ -1,0 +1,42 @@
+<!--pages/person/mywelfare/detail/detail.wxml-->
+<!--pages/welfare/detail/detail.wxml-->
+<authorization>
+    <view>
+        
+        <view class= "detail-view">
+            <view class="order">
+                <view class="welfarename" style="margin-bottom: 30rpx;">我的福利信息</view>
+                <view class="ordercontent">
+                    <view hidden="true">{{detail.order.orderId}}</view>
+                    <view class="flspGroup">福利编号：<text class="flspGrouptext">{{detail.order.orderBh}}</text></view>
+                    <view class="flspGroup">兑换时间：<text class="flspGrouptext">{{detail.order.orderXdsj}}</text></view>
+                    <view class="flspGroup">兑换数量：<text class="flspGrouptext">{{detail.order.orderDhsl}}</text></view>
+                    <view class="flspGroup">福利状态：<text class="flspGrouptext">{{detail.order.orderStatus}}</text></view>
+                    <view class="flspGroup">有效期：<text class="flspGrouptext">{{detail.order.orderYxqs}}--{{detail.order.orderYxqz}}</text></view>
+                </view>
+                <view class="welfarename" style="margin-bottom: 30rpx;">我的福利兑换码：</view>
+                <view class="img-view" style="background-color: #f5f5f5"><image class="img" mode='heightFix'  src="{{detail.order.orderQr}}"></image></view>
+            </view>
+
+            <view class="flsp">
+                <view class="welfarename" style="margin-bottom: 30rpx;">福利商品</view>
+                <view hidden="true">{{detail.flsp.flspId}}</view>
+                <view class="img-view"><image class="img" mode='heightFix' src="{{detail.flsp.flspImg}}"></image></view>
+            
+                
+                <view class="welfarename">{{detail.flsp.flspMc}}</view>
+                <view class="flspGroup">福利分组：<text class="flspGrouptext">{{detail.flsp.flspGroup}}</text></view>
+                <view class="flspGroup">实付积分：<text class="flspGrouptext">{{detail.flsp.flspJf}}</text></view>
+            </view>
+            <view>
+                <view class="welfarename" style="margin-bottom: 30rpx;">福利提供方</view>
+                <view hidden="true">{{detail.shxx.deptId}}</view>
+                <view class="img-view"><image class="img" mode='heightFix'  src="{{detail.shxx.deptImg}}"></image></view>
+                <view class="detail">主办方：{{detail.shxx.deptMc}}</view>
+                <view class="detail">兑换地址：{{detail.shxx.deptDz}}</view>
+                <view class="detail" bindtap="call" data-mobile="{{detail.shxx.deptDh}}">兑换电话：{{detail.shxx.deptDh}}</view>
+            </view>
+        </view>
+    </view>
+</authorization>
+
