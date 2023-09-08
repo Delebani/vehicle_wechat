@@ -5,13 +5,22 @@
 <!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
 <view wx:else>请升级微信版本</view> -->
 
-<view class="hello">
-    <view class="content">您好，欢迎加入福利中心</view>
-    <view class="content">正在登录中......</view>
-     <image mode="widthFix" src="/static/img/welcome/welcome.png"></image>
+<view class="container">
+  <view class="userinfo">
+    <block>
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">登录中...</text>
+  </view>
 </view>
-<!-- <view wx:if='{{viewShow}}'  class="button-sp-area">
-    
-   
-    <button open-type="getPhoneNumber" type="primary" 	hover-class = 'button-hover' bindgetphonenumber="getPhoneNumber">一键登录</button>
-</view> -->
+
+<view class="button-sp-area">
+    账号：<input type="nickname" value="{{userInfo.nickName}}" bindinput="onInput" bindconfirm="onConfirm" confirm-type="done"/>
+    密码：<input type="nickname" value="{{userInfo.nickName}}" bindinput="onInput" bindconfirm="onConfirm" confirm-type="done"/>
+    <button open-type="getPhoneNumber" type="primary" 	hover-class = 'button-hover' bindgetphonenumber="getPhoneNumber">登录</button>
+</view>

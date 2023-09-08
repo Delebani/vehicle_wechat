@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<authorization>
 <view class="container">
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
@@ -21,3 +22,4 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+</authorization>

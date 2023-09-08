@@ -14,8 +14,9 @@ App({
     })
   },
   globalData: {
-    baseUrl:'https://2w48v76889.goho.co/',
+    baseUrl:'https://2w48v76889.goho.co',
     userInfo: {},
+    openId: '',
     token: '',
   },
   onLaunch: function(options) {

@@ -1,16 +1,18 @@
 /* pages/login/login.wxss */
-.button-sp-area{
-    margin: 0 auto;
-    width: 60%;
-  }
-  .hello{
-    font-size: 50rpx;
-    font-weight: bold;
-    margin-top: 50rpx;
-    margin-left: 50rpx;
-    margin-bottom: 50rpx;
-  }
-  .content{
-    margin-left: 50rpx;
-    margin-bottom: 50rpx;
-  }
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.usermotto {
+  margin-top: 100px;
+}
